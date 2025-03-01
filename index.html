@@ -1,11 +1,65 @@
+<!-- git remote add origin https://github.com/WRATHexe/Dev-Board.git
+git branch -M main
+git push -u origin main -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dev-Board</title>
-</head>
-<body>
+    <!-- poppin font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- daisy ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- custom color  -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#F4F7FF",
+              secondary: "#00303C",
+            },
+          },
+        },
+      };
+    </script>
+    
+    <style>
+      .poppins{
+        font-family: "Poppins", serif;
+      }
+    </style>
+  </head>
+<body class="bg-primary poppins p-4">
+    <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <div class="flex justify-between items-center p-4 bg-white shadow-md rounded-lg">
+            <div class="flex items-center gap-2">
+                <img src="./assets/logo.png" alt="logo" class="w-10 h-10 rounded-full" />
+                <div class="text-secondary-600 text-2xl">Dev<span class="text-secondary-800 font-bold">Board</span></div>
+            </div>
+            <div class="flex items-center gap-4">
+                <div id="task-completion" class=" bg-primary flex items-center gap-1.5 rounded-full">
+                 <div class="m-4 mr-1.5">
+                    <img src="./assets/checkbox.png" alt="checkbox icon" class="w-6 h-6" />
+                 </div><p id="completed-task" class=" text-3xl font-bold m-4 ml-0">23</p>
+                </div>
+                <div class="theme-div p-3 bg-primary rounded-full">
+                    <div class="w-10">
+                        <img src="./assets/theme-btn.png" alt="theme button" id="theme" />
+                    </div>
+                </div>
+            </div>
+        </div>
     
 </body>
 </html>
