@@ -27,6 +27,9 @@ git push -u origin main -->
             colors: {
               primary: "#F4F7FF",
               secondary: "#00303C",
+              acent:"#3752FD",
+              grad_1:"#6C7FFA",
+              grad_2:"#9BA8F8",
             },
           },
         },
@@ -40,7 +43,7 @@ git push -u origin main -->
     </style>
   </head>
 <body class="bg-primary poppins p-4">
-    <div class="max-w-6xl mx-auto">
+    <div class=" mx-auto">
         <!-- Header -->
         <div class="flex justify-between items-center p-4 bg-white shadow-md rounded-lg">
             <div class="flex items-center gap-2">
@@ -60,6 +63,60 @@ git push -u origin main -->
                 </div>
             </div>
         </div>
+
+        <!-- Dashboard Content -->
+        <section>
+            <div class="grid grid-cols-12 gap-4 flex-row mt-6 bg-white rounded-xl p-6">
+                <div class="col-span-9 space-y-4 ">
+                    <!-- Info Cards -->
+                    <div class="grid grid-cols-4 gap-4">
+                        <div class="bg-primary p-6 rounded-xl flex gap-4 items-center justify-flex">
+                            <div class="bg-white rounded-full p-4">
+                                <img src="assets/checkbox.png" alt="checkbox icon" class="w-6 h-6 " />
+                            </div>
+                            <div>
+                            <p class="text-lg font-semibold">Task Assigned</p>
+                            <p class="text-2xl font-bold text-blue-600">05</p>
+                            </div>
+                        </div>
+
+                        <div class="col-span-2 p-4 rounded-xl  bg-gradient-to-r from-acent via-grad_1 to-grad_2 shadow-md flex items-center justify-center">
+                            <img src="./assets/board.png" alt="board icon" class="w-20 h-20" />
+                            <p class="text-white font-semibold text-2xl">Discover Something New Today!</p>
+                        </div>
+
+                        <div class="bg-primary p-4 rounded-xl flex gap-4 items-center" >
+                            <div>
+                                <img src="assets/calender.png" alt="calender icon" class="w-6 h-6" />
+                            </div>
+                            <div>
+                                <p class="text-lg font-semibold">Wed,</p>
+                                <p class="text-xl font-bold">Jul 28, 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Activity Log -->
+            <div class="col-span-3 bg-white p-4 rounded-lg shadow-md">
+                <div class="grid items-center justify-center">
+                    <div class=" flex gap-2">
+                        <img src="./assets/activity.png" alt="activity icon" class="w-6 h-6" />
+                        <h3 class="font-semibold">Activity Log</h3>
+                    </div>
+                    <button class="btn btn-sm btn-primary mt-2">Clear History</button>
+                </div>
+                <div class="mt-4 space-y-2 h-full">
+                    <p class="bg-gray-200 p-2 rounded-lg text-sm">You have completed the task Add Dark Mode at 12:48:15 PM</p>
+                    <p class="bg-gray-200 p-2 rounded-lg text-sm">You have completed the task Add Dark Mode at 12:48:15 PM</p>
+                </div>
+            </div>
+            </div>
+            
+        </section>
+
+
+
+    </div>
     
 </body>
 </html>
