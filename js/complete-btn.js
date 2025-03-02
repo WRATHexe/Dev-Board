@@ -22,7 +22,7 @@
 
             let allDisabled = [...buttons].every(button => button.disabled);
             if (allDisabled) {
-                alert("You have completed all your tasks!");
+                alert("Congratulations!! You have completed all your tasks!");
             }
             clearHistory.addEventListener("click", function () {
                 activityLog.innerHTML = "";
@@ -34,7 +34,7 @@
     {
         return document.getElementById(id);
     }
-
+    //update date and time
     function updateDateTime(){
         let now=new Date();
         
@@ -47,6 +47,7 @@
     setInterval(updateDateTime, 1000);
     updateDateTime();
 
+    //change theme randomly
     function getRandomColor() {
         return `#${Math.floor(Math.random() *256*256*256).toString(16)}`;
     }
@@ -54,3 +55,9 @@
     document.getElementById("theme").addEventListener("click", function(){
         document.body.style.backgroundColor = getRandomColor(); 
     });
+
+    //redirect to blog page
+    document.getElementById("to-blog").addEventListener("click", function(){
+        window.location.href = "./blog.html";
+    });
+    

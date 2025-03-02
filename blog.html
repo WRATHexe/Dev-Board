@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+        <!-- poppin font  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet"
+        />
+        <!-- daisy ui -->
+        <link
+          href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+          rel="stylesheet"
+          type="text/css"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+    
+        <!-- custom color  -->
+        <script>
+          tailwind.config = {
+            theme: {
+              extend: {
+                colors: {
+                  primary: "#F4F7FF",
+                  secondary: "#00303C",
+                  acent: "#3752FD",
+                  grad_1: "#6C7FFA",
+                  grad_2: "#9BA8F8",
+                },
+              },
+            },
+          };
+        </script>
+    
+        <style>
+          .poppins {
+            font-family: "Poppins", serif;
+          }
+        </style>
+</head>
+<body class="bg-primary poppins p-4">
+    <div class="max-w-screen-2xl mx-auto mx-36">
+        <!-- Header -->
+        <section class="flex justify-between items-center p-4 bg-white shadow-md rounded-lg">
+            <div class="flex items-center gap-2">
+            <img
+                src="./assets/logo.png"
+                alt="logo"
+                class="w-10 h-10 rounded-full"
+            />
+            <div class="text-secondary-600 text-2xl">
+                Dev<span class="text-secondary-800 font-bold">Board</span>
+            </div>
+            </div>
+            <div class="flex items-center gap-4 bg-acent flex items-center gap-1.5 rounded-full">
+
+            <button id="to-index" class="p-4 text-white">Back to Page</button>
+            </div>
+        </section>
+        <section>
+            <div>
+                <h1 class="text-4xl text-secondary-800 font-bold mt-4 text-center">Blog</h1>
+                <div class="grid grid-cols-1 gap-4 mt-4 text-justify">
+                    <div class="bg-white shadow-md rounded-lg p-4 ">
+                        <h2 class="text-xl text-secondary-800 font-bold py-2 border-b-2 border-dashed border-secondary/20">Question-1: What are the different ways to select an element in the DOM?</h2>
+                        <p class="text-secondary-800 my-4 ">In JavaScript, there are many ways to select elements from DOM. We can use <span class="font-semibold">getElementById()</span> to select a single element by its unique ID. If there are multiple elements with the same class, we can use <span class="font-semibold">getElementsByClassName()</span>. To select all elements of a specific tag, like all tags, we use <span class="font-semibold">getElementsByTagName()</span>. We can also use <span class="font-semibold">querySelector()</span> which picks the first element that matches any CSS selector and for selecting all element we can use <span class="font-semibold">querySelectorAll()</span>. These different methods let us easily work with different parts of the web page, depending on what we want to do.</p>
+                    </div>
+                    <div class="grid grid-cols-1 gap-4 mt-4">
+                        <div class="bg-white shadow-md rounded-lg p-4">
+                            <h2 class="text-xl text-secondary-800 font-bold py-2 border-b-2 border-dashed border-secondary/20">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h2>
+                            <p class="text-secondary-800 my-4 "><span class="font-semibold">innerHTML:</span> It gives the HTML code inside an element, including any tags.
+                                We can also use it to add new HTML inside an element.
+                                <br><br>
+                                <span class="font-semibold">innerText:</span> It gives only the visible text from an element and respects the styling of the page.
+                                <br><br>
+                                <span class="font-semibold">textContent:</span> It gives all the text inside an element, even if some parts are hidden but does not include any HTML tags.
+                                </p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 gap-4 mt-4">
+                        <div class="bg-white shadow-md rounded-lg p-4">
+                            <h2 class="text-xl text-secondary-800 font-bold py-2 border-b-2 border-dashed border-secondary/20">Question-3: What is event delegation in the DOM?</h2>
+                            <p class="text-secondary-800 my-4 ">Event delegation is when we add one event listener to a parent element instead of adding separate listeners to each child element.<br>
+                                For example, we can Imagine a list with many buttons. Instead of adding a click event to every button, we can add just one click event to the list itself and check which button was clicked.
+                                </p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 gap-4 mt-4">
+                        <div class="bg-white shadow-md rounded-lg p-4">
+                            <h2 class="text-xl text-secondary-800 font-bold py-2 border-b-2 border-dashed border-secondary/20">Question-4: What is event bubbling in the DOM?</h2>
+                            <p class="text-secondary-800 my-4 ">Event bubbling is how events move from the clicked element up through its parents.
+                                So if we click a button inside a div inside a section — the button's event happens first, then the div, then the section.
+                                </p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 gap-4 mt-4">
+                        <div class="bg-white shadow-md rounded-lg p-4">
+                            <h2 class="text-xl text-secondary-800 font-bold py-2 border-b-2 border-dashed border-secondary/20">Question-5: How do you create, add, and remove elements using JavaScript?</h2>
+                            <p class="text-secondary-800 my-4 "><span class="font-semibold">To create an element:</span> const div = document.createElement("div");<br><br>
+                                <span class="font-semibold">To add it to the page:</span> parent.appendChild(div);<br><br>
+                                <span class="font-semibold">To remove it:</span> parent.removeChild(div);
+                                </p>
+                        </div>
+                    </div>
+                </div>
+                    
+                    
+            </div>
+        </section>
+
+    <script >
+    // Redirect to index page
+    document.getElementById("to-index").addEventListener("click", function(){
+        window.location.href = "./index.html";
+    });
+    </script>
+</body>
+</html>
